@@ -6,3 +6,4 @@ Personal scala repositories
 - hnaderi/lepus
 - hnaderi/named-codec
 - hnaderi/scala-k8s
+- hnaderi/sbt-k8s
