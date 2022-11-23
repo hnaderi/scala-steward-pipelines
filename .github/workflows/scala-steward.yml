@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron: '0 0 * * 0'
+    - cron: '0 0 * * *'
   # Enable to run on-demand, so you can debug workflow easily
   workflow_dispatch:
 
