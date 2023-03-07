@@ -3,6 +3,7 @@
 Personal scala repositories
 
 - hnaderi/edomata
+- hnaderi/edomata-example
 - hnaderi/lepus
 - hnaderi/named-codec
 - hnaderi/scala-k8s
