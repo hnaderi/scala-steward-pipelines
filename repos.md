@@ -8,3 +8,4 @@ Personal scala repositories
 - hnaderi/named-codec
 - hnaderi/scala-k8s
 - hnaderi/sbt-k8s
+- hnaderi/yaml4s
