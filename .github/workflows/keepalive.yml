@@ -1,0 +1,32 @@
+name: Keepalive this repo
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron:  '0 0 * * *'
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v3
+      -
+        name: Make a change
+        run: |
+          date > .keepalive
+      -
+        name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.ADMIN_GITHUB_TOKEN }}
+          commit-message: Updated keepalive file
+          committer: GitHub <noreply@github.com>
+          author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+          signoff: false
+          branch: keepalive
+          delete-branch: true
+          title: 'Update keepalive file'
+          body: |
+            An automated change to keep the repo schedules active after 60 days.
