@@ -1,3 +1,4 @@
+name: Update Scala projects' dependencies
 on:
   schedule:
     - cron: '0 0 * * *'
