@@ -9,3 +9,4 @@ Personal scala repositories
 - hnaderi/scala-k8s
 - hnaderi/sbt-k8s
 - hnaderi/yaml4s
+- hnaderi/scala-readpass
