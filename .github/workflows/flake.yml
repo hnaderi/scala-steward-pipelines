@@ -16,7 +16,7 @@ jobs:
       run: |
         cat repos.md | grep "^-" | sed -E "s/- (.+)/\"\1\"/" | jq -sc "{ \"repo\": . }" > tmp
         matrixStringifiedObject=$(cat ./tmp) # Use this as jq @sh not working right
-        echo "::set-output name=matrix::$matrixStringifiedObject"
+        echo "matrix=$matrixStringifiedObject" >> $GITHUB_OUTPUT
 
   lockfile:
     runs-on: ubuntu-latest
